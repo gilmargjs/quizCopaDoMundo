@@ -49,7 +49,6 @@ const resetUserScore = () => {
   score = 0
 }
 
-
 const animateFinalScore = () => {
   //contador
   count = 0
@@ -61,16 +60,16 @@ const animateFinalScore = () => {
       clearInterval(timer)
     }
     //condição que modificará o background da div de resposta
-    if(count >= 50){
+    if(count >= 60){
       //removendo background vermelho
-      finalScoreContainer.classList.remove('bg-danger')
+      finalScoreContainer.querySelector('p').classList.remove('bg-danger')
       //adicionando background verde
-      finalScoreContainer.classList.add('bg-success')
+      finalScoreContainer.querySelector('p').classList.add('bg-success')
     }else{
       //removendo background verde 
-      finalScoreContainer.classList.remove('bg-success')
+      finalScoreContainer.querySelector('p').classList.remove('bg-success')
       //adicionando background vermelho
-      finalScoreContainer.classList.add('bg-danger')
+      finalScoreContainer.querySelector('p').classList.add('bg-danger')
     }
     //incerindo o resultado no html
     finalScoreContainer.querySelector('span').textContent = `${count++}%`
